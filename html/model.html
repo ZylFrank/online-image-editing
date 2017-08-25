@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/jquery.Jcrop.css"/>
+    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../css/my-style.css"/>
+    <script src="../js/jquery-1.9.1.min.js"></script>
+    <script src="../js/jquery.Jcrop.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/my-js.js"></script>
+</head>
+<body>
+<div class="main container">
+    <div class="master">
+
+        <img src="../images/big-12.jpg" alt="" id="cut-photo" class="img-responsive"/>
+
+    </div>
+
+    <div class="right">
+
+        <div id="coordinate" style="display: none">
+            <label>x1</label><input type="text" id="txtX1" />
+            <label>y1</label><input type="text" id="txtY1" />
+            <br/>
+            <br/>
+            <label>x2</label><input type="text" id="txtX2" />
+            <label>y2</label><input type="text" id="txtY2" />
+            <br/>
+            <br/>
+            <label>width</label><input type="text" id="txtWidth" />
+            <label>height</label><input type="text" id="txtHeight" />
+        </div>
+
+
+    </div>
+
+</div>
+<!--漂浮-->
+
+<div style="display: none" id="pf">
+    <button type="button" id="cut-btn" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">裁剪</button>
+</div>
+<!--Modal-->
+<div class="modal fade container" id="myModal" style="width: 400px;z-index: 10001">
+    <div><!-- "初始化大小-->
+        <div class="modal-content">
+            <div class="modal-header"><!--去掉了头部样式-->
+                <div class="cut" style="display: none; ">
+                    <canvas id="myCanvas"  style="border:1px solid #d3d3d3;" class="img-responsive">
+                        Your browser does not support the HTML5 canvas tag.
+                    </canvas>
+                </div>
+            </div>
+            <div class="modal-body">
+               <!-- <div style="">
+                    <h4><input type="checkbox" class="checkbox-inline"/>黑白</h4>
+                </div>-->
+
+                <section>
+                    <h4>黑白</h4>
+                    <div class="checkboxThree" style="margin-top: -35px">
+                        <input type="checkbox" value="1" id="checkboxThreeInput"   />
+                        <label for="checkboxThreeInput" id="black"></label>
+                    </div>
+                </section>
+                <br/>
+
+               <span><h4> 亮  度</h4><input type="range" id="ld"  min="-255" max="255" /></span>
+                <br/>
+
+               <span><h4>对比度</h4> <input type="range" id="db" min="-255" max="255"/></span>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" id="cancel" >取消</button>
+                <button type="button" class="btn btn-primary" id="ok">完成</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+.main{
+    /*width: 1000px;
+    height: 600px;
+*/
+
+}
+.master{
+   z-index: 1000;
+
+
+}
+/*.master img{
+    width: 300px;
+    height: 400px;
+}*/
+
+.coordinate{
+padding-top: 10px;
+
+}
+.cut{
+   margin-top: 10px;
+
+}
+#big{
+    cursor:help
+   /* width: 200%;
+    height: 200%;*/
+}
+#pf{
+   position: absolute;
+   top: 20px;
+   left: 100px;
+
+    z-index: 10000;
+}
+#pf button{
+
+}
+/**/
+input[type=checkbox] {
+    visibility: hidden;
+}
+
+/*3*/
+.checkboxThree {
+    width: 120px;
+    height: 25px;
+    background: #333;
+    margin: 20px 60px;
+
+    border-radius: 50px;
+    position: relative;
+}
+.checkboxThree:before {
+    content: 'On';
+    position: absolute;
+    top: 2px;
+    left: 13px;
+    height: 2px;
+    color: #6b6b6b;
+    font-size: 16px;
+}
+/**
+ * Create the label for the off position
+ */
+.checkboxThree:after {
+    content: 'Off';
+    position: absolute;
+    top: 2px;
+    left: 74px;
+    height: 2px;
+    color: #ddd;
+    font-size: 16px;
+}
+.checkboxThree label {
+    display: block;
+    width: 40px;
+    height: 22px;
+    border-radius: 50px;
+
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    transition: all .5s ease;
+    cursor: pointer;
+    position: absolute;
+    top: 2px;
+    z-index: 1;
+    left: 12px;
+    background: #ddd;
+}
+.checkboxThree input[type=checkbox]:checked + label {
+    left: 65px;
+    background: #6b6b6b;
+}
